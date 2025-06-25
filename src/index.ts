@@ -7,7 +7,7 @@ import CONFIG from "./configs/environtment"
 import { logger } from "./utils/logger"
 
 // Imported Routes
-import userRoutes from "./routes/userRoutes"
+import userRoute from "./routes/userRoute"
 
 dotenv.config()
 const app: Application = express()
@@ -25,7 +25,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
-app.use("/api/auth", userRoutes)
+app.use("/api/auth", userRoute)
 
 // Server listening
 app.listen(CONFIG.port, () => {

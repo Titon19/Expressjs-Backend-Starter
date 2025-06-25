@@ -2,8 +2,8 @@ import { Router } from "express"
 import { register } from "../controllers/userController"
 import { validationRequest } from "../middlewares/validationRequest"
 import { userValidation } from "../validations/userValidations"
-const userRoutes = Router()
+const userRoute = Router()
 
-userRoutes.post("/register", validationRequest(userValidation), register)
+userRoute.post("/register", validationRequest(userValidation), register)
 
-export default userRoutes
+export default userRoute
